@@ -43,10 +43,10 @@
             this.button23 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button24 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvBill = new System.Windows.Forms.ListView();
+            this.clSoluong = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clTen = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clGia = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
@@ -56,9 +56,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtSum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,14 +66,12 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.lvFood = new System.Windows.Forms.ListView();
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button30 = new System.Windows.Forms.Button();
+            this.btnTam = new System.Windows.Forms.Button();
             this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
+            this.btnThanhToan = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imagePanel = new System.Windows.Forms.PictureBox();
@@ -96,7 +94,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(270, 37);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(260, 22);
+            this.lblTitle.Size = new System.Drawing.Size(274, 24);
             this.lblTitle.TabIndex = 85;
             this.lblTitle.Text = "Main-CSR:  Huỳnh Mai Ái Ngọc";
             // 
@@ -108,7 +106,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(72, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 22);
+            this.label1.Size = new System.Drawing.Size(192, 24);
             this.label1.TabIndex = 84;
             this.label1.Text = "A1 20/02/2025 |  14:34";
             // 
@@ -234,34 +232,34 @@
             this.button24.Text = "4";
             this.button24.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // lvBill
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 85);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(531, 258);
-            this.listView1.TabIndex = 151;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clSoluong,
+            this.clTen,
+            this.clGia});
+            this.lvBill.HideSelection = false;
+            this.lvBill.Location = new System.Drawing.Point(12, 85);
+            this.lvBill.Name = "lvBill";
+            this.lvBill.Size = new System.Drawing.Size(531, 258);
+            this.lvBill.TabIndex = 151;
+            this.lvBill.UseCompatibleStateImageBehavior = false;
+            this.lvBill.View = System.Windows.Forms.View.Details;
             // 
-            // columnHeader1
+            // clSoluong
             // 
-            this.columnHeader1.Text = "Số lượng";
-            this.columnHeader1.Width = 107;
+            this.clSoluong.Text = "Số lượng";
+            this.clSoluong.Width = 107;
             // 
-            // columnHeader2
+            // clTen
             // 
-            this.columnHeader2.Text = "Tên món";
-            this.columnHeader2.Width = 317;
+            this.clTen.Text = "Tên món";
+            this.clTen.Width = 317;
             // 
-            // columnHeader3
+            // clGia
             // 
-            this.columnHeader3.Text = "Giá";
-            this.columnHeader3.Width = 156;
+            this.clGia.Text = "Giá";
+            this.clGia.Width = 156;
             // 
             // groupBox1
             // 
@@ -274,9 +272,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button14);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTotal);
+            this.groupBox1.Controls.Add(this.txtDiscount);
+            this.groupBox1.Controls.Add(this.txtSum);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -371,26 +369,27 @@
             this.button14.Text = "1";
             this.button14.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(283, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtTotal.Location = new System.Drawing.Point(283, 109);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(185, 22);
+            this.txtTotal.TabIndex = 5;
             // 
-            // textBox2
+            // txtDiscount
             // 
-            this.textBox2.Location = new System.Drawing.Point(283, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtDiscount.Location = new System.Drawing.Point(283, 73);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(185, 22);
+            this.txtDiscount.TabIndex = 4;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
-            // textBox1
+            // txtSum
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtSum.Location = new System.Drawing.Point(283, 31);
+            this.txtSum.Name = "txtSum";
+            this.txtSum.Size = new System.Drawing.Size(185, 22);
+            this.txtSum.TabIndex = 3;
             // 
             // label4
             // 
@@ -399,7 +398,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(33, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 22);
+            this.label4.Size = new System.Drawing.Size(148, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tổng thanh toán";
             // 
@@ -410,7 +409,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(33, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Giảm giá";
             // 
@@ -421,7 +420,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 22);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tổng tiền";
             // 
@@ -473,58 +472,42 @@
             this.button15.Text = "Ghi chú";
             this.button15.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // txtSearch
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(711, 63);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 16);
-            this.label5.TabIndex = 162;
-            this.label5.Text = "Số lượng";
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtSearch.Location = new System.Drawing.Point(566, 59);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(363, 28);
+            this.txtSearch.TabIndex = 120;
             // 
-            // textBox4
+            // lvFood
             // 
-            this.textBox4.Location = new System.Drawing.Point(689, 82);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(104, 22);
-            this.textBox4.TabIndex = 120;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(566, 121);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(363, 28);
-            this.textBox5.TabIndex = 120;
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvFood.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader5});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(566, 170);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(363, 390);
-            this.listView2.TabIndex = 163;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lvFood.HideSelection = false;
+            this.lvFood.Location = new System.Drawing.Point(566, 110);
+            this.lvFood.Name = "lvFood";
+            this.lvFood.Size = new System.Drawing.Size(363, 450);
+            this.lvFood.TabIndex = 163;
+            this.lvFood.UseCompatibleStateImageBehavior = false;
+            this.lvFood.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Tên món";
             this.columnHeader5.Width = 317;
             // 
-            // button30
+            // btnTam
             // 
-            this.button30.BackColor = System.Drawing.Color.DarkBlue;
-            this.button30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button30.ForeColor = System.Drawing.SystemColors.Control;
-            this.button30.Location = new System.Drawing.Point(993, 366);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(165, 47);
-            this.button30.TabIndex = 166;
-            this.button30.Text = "Bill tạm tính";
-            this.button30.UseVisualStyleBackColor = false;
+            this.btnTam.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnTam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTam.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnTam.Location = new System.Drawing.Point(993, 366);
+            this.btnTam.Name = "btnTam";
+            this.btnTam.Size = new System.Drawing.Size(165, 47);
+            this.btnTam.TabIndex = 166;
+            this.btnTam.Text = "Bill tạm tính";
+            this.btnTam.UseVisualStyleBackColor = false;
             // 
             // button31
             // 
@@ -538,17 +521,17 @@
             this.button31.Text = "Quay lại";
             this.button31.UseVisualStyleBackColor = false;
             // 
-            // button32
+            // btnThanhToan
             // 
-            this.button32.BackColor = System.Drawing.Color.DarkOrange;
-            this.button32.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button32.ForeColor = System.Drawing.SystemColors.Control;
-            this.button32.Location = new System.Drawing.Point(993, 485);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(165, 75);
-            this.button32.TabIndex = 168;
-            this.button32.Text = "Thanh toán";
-            this.button32.UseVisualStyleBackColor = false;
+            this.btnThanhToan.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThanhToan.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnThanhToan.Location = new System.Drawing.Point(993, 485);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(165, 75);
+            this.btnThanhToan.TabIndex = 168;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.UseVisualStyleBackColor = false;
             // 
             // pictureBox4
             // 
@@ -624,21 +607,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 587);
             this.Controls.Add(this.cbloaiMon);
-            this.Controls.Add(this.button32);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.button31);
-            this.Controls.Add(this.button30);
+            this.Controls.Add(this.btnTam);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lvFood);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.button15);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lvBill);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
@@ -689,10 +670,10 @@
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.PictureBox imagePanel;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ListView lvBill;
+        private System.Windows.Forms.ColumnHeader clSoluong;
+        private System.Windows.Forms.ColumnHeader clTen;
+        private System.Windows.Forms.ColumnHeader clGia;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button17;
@@ -702,9 +683,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.TextBox txtSum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -712,16 +693,14 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.ListView lvFood;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button30;
+        private System.Windows.Forms.Button btnTam;
         private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
+        private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.ComboBox cbloaiMon;
     }
 }

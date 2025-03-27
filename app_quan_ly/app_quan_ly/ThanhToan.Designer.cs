@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThanhToan));
             this.lblTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSoDoBan = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.btnThe = new System.Windows.Forms.Button();
+            this.btnCK = new System.Windows.Forms.Button();
+            this.btnTienM = new System.Windows.Forms.Button();
+            this.lvTT = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,14 +47,14 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.txtSum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnSuccess = new System.Windows.Forms.Button();
+            this.btnTamTinh = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@
             this.imagePanel = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLoai = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -91,7 +91,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(440, 38);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(260, 22);
+            this.lblTitle.Size = new System.Drawing.Size(274, 24);
             this.lblTitle.TabIndex = 59;
             this.lblTitle.Text = "Main-CSR:  Huỳnh Mai Ái Ngọc";
             // 
@@ -103,63 +103,63 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(72, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(192, 22);
+            this.label1.Size = new System.Drawing.Size(192, 24);
             this.label1.TabIndex = 58;
             this.label1.Text = "A1 20/02/2025 |  14:34";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnSoDoBan
+            // btnThe
             // 
-            this.btnSoDoBan.BackColor = System.Drawing.Color.DarkBlue;
-            this.btnSoDoBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnSoDoBan.ForeColor = System.Drawing.Color.White;
-            this.btnSoDoBan.Location = new System.Drawing.Point(12, 107);
-            this.btnSoDoBan.Name = "btnSoDoBan";
-            this.btnSoDoBan.Size = new System.Drawing.Size(187, 77);
-            this.btnSoDoBan.TabIndex = 78;
-            this.btnSoDoBan.Text = "Thẻ";
-            this.btnSoDoBan.UseVisualStyleBackColor = false;
-            this.btnSoDoBan.Click += new System.EventHandler(this.btnSoDoBan_Click);
+            this.btnThe.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnThe.ForeColor = System.Drawing.Color.White;
+            this.btnThe.Location = new System.Drawing.Point(12, 107);
+            this.btnThe.Name = "btnThe";
+            this.btnThe.Size = new System.Drawing.Size(187, 77);
+            this.btnThe.TabIndex = 78;
+            this.btnThe.Text = "Thẻ";
+            this.btnThe.UseVisualStyleBackColor = false;
+            this.btnThe.Click += new System.EventHandler(this.btnSoDoBan_Click);
             // 
-            // button18
+            // btnCK
             // 
-            this.button18.BackColor = System.Drawing.Color.DarkBlue;
-            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(12, 220);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(187, 77);
-            this.button18.TabIndex = 79;
-            this.button18.Text = "Chuyển Khoản";
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.btnCK.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnCK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnCK.ForeColor = System.Drawing.Color.White;
+            this.btnCK.Location = new System.Drawing.Point(12, 220);
+            this.btnCK.Name = "btnCK";
+            this.btnCK.Size = new System.Drawing.Size(187, 77);
+            this.btnCK.TabIndex = 79;
+            this.btnCK.Text = "Chuyển Khoản";
+            this.btnCK.UseVisualStyleBackColor = false;
+            this.btnCK.Click += new System.EventHandler(this.button18_Click);
             // 
-            // button19
+            // btnTienM
             // 
-            this.button19.BackColor = System.Drawing.Color.DarkBlue;
-            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button19.ForeColor = System.Drawing.Color.White;
-            this.button19.Location = new System.Drawing.Point(12, 332);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(187, 77);
-            this.button19.TabIndex = 80;
-            this.button19.Text = "Tiền Mặt";
-            this.button19.UseVisualStyleBackColor = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.btnTienM.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnTienM.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTienM.ForeColor = System.Drawing.Color.White;
+            this.btnTienM.Location = new System.Drawing.Point(12, 332);
+            this.btnTienM.Name = "btnTienM";
+            this.btnTienM.Size = new System.Drawing.Size(187, 77);
+            this.btnTienM.TabIndex = 80;
+            this.btnTienM.Text = "Tiền Mặt";
+            this.btnTienM.UseVisualStyleBackColor = false;
+            this.btnTienM.Click += new System.EventHandler(this.button19_Click);
             // 
-            // listView1
+            // lvTT
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvTT.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(244, 165);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(636, 244);
-            this.listView1.TabIndex = 81;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvTT.HideSelection = false;
+            this.lvTT.Location = new System.Drawing.Point(244, 165);
+            this.lvTT.Name = "lvTT";
+            this.lvTT.Size = new System.Drawing.Size(636, 244);
+            this.lvTT.TabIndex = 81;
+            this.lvTT.UseCompatibleStateImageBehavior = false;
+            this.lvTT.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -186,9 +186,9 @@
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button14);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtTotal);
+            this.groupBox1.Controls.Add(this.txtDiscount);
+            this.groupBox1.Controls.Add(this.txtSum);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -283,26 +283,26 @@
             this.button14.Text = "1";
             this.button14.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtTotal
             // 
-            this.textBox3.Location = new System.Drawing.Point(436, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 22);
-            this.textBox3.TabIndex = 5;
+            this.txtTotal.Location = new System.Drawing.Point(436, 111);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(185, 22);
+            this.txtTotal.TabIndex = 5;
             // 
-            // textBox2
+            // txtDiscount
             // 
-            this.textBox2.Location = new System.Drawing.Point(436, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 22);
-            this.textBox2.TabIndex = 4;
+            this.txtDiscount.Location = new System.Drawing.Point(436, 73);
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(185, 22);
+            this.txtDiscount.TabIndex = 4;
             // 
-            // textBox1
+            // txtSum
             // 
-            this.textBox1.Location = new System.Drawing.Point(436, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 22);
-            this.textBox1.TabIndex = 3;
+            this.txtSum.Location = new System.Drawing.Point(436, 31);
+            this.txtSum.Name = "txtSum";
+            this.txtSum.Size = new System.Drawing.Size(185, 22);
+            this.txtSum.TabIndex = 3;
             // 
             // label4
             // 
@@ -311,7 +311,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(33, 109);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 22);
+            this.label4.Size = new System.Drawing.Size(148, 24);
             this.label4.TabIndex = 2;
             this.label4.Text = "Tổng thanh toán";
             // 
@@ -322,7 +322,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(33, 73);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 22);
+            this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 1;
             this.label3.Text = "Giảm giá";
             // 
@@ -333,33 +333,33 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(33, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 22);
+            this.label2.Size = new System.Drawing.Size(90, 24);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tổng tiền";
             // 
-            // button7
+            // btnSuccess
             // 
-            this.button7.BackColor = System.Drawing.Color.DarkOrange;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(964, 536);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(191, 47);
-            this.button7.TabIndex = 137;
-            this.button7.Text = "Đóng hóa đơn";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnSuccess.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnSuccess.ForeColor = System.Drawing.Color.White;
+            this.btnSuccess.Location = new System.Drawing.Point(964, 536);
+            this.btnSuccess.Name = "btnSuccess";
+            this.btnSuccess.Size = new System.Drawing.Size(191, 47);
+            this.btnSuccess.TabIndex = 137;
+            this.btnSuccess.Text = "Đóng hóa đơn";
+            this.btnSuccess.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btnTamTinh
             // 
-            this.button8.BackColor = System.Drawing.Color.DarkBlue;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(964, 476);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(191, 47);
-            this.button8.TabIndex = 136;
-            this.button8.Text = "Bill tạm tính";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnTamTinh.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnTamTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTamTinh.ForeColor = System.Drawing.Color.White;
+            this.btnTamTinh.Location = new System.Drawing.Point(964, 476);
+            this.btnTamTinh.Name = "btnTamTinh";
+            this.btnTamTinh.Size = new System.Drawing.Size(191, 47);
+            this.btnTamTinh.TabIndex = 136;
+            this.btnTamTinh.Text = "Bill tạm tính";
+            this.btnTamTinh.UseVisualStyleBackColor = false;
             // 
             // button13
             // 
@@ -544,13 +544,13 @@
             this.pictureBox4.TabIndex = 139;
             this.pictureBox4.TabStop = false;
             // 
-            // textBox4
+            // txtLoai
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox4.Location = new System.Drawing.Point(470, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 34);
-            this.textBox4.TabIndex = 168;
+            this.txtLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtLoai.Location = new System.Drawing.Point(470, 102);
+            this.txtLoai.Name = "txtLoai";
+            this.txtLoai.Size = new System.Drawing.Size(289, 34);
+            this.txtLoai.TabIndex = 168;
             // 
             // label5
             // 
@@ -567,18 +567,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 603);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtLoai);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnSuccess);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button19);
-            this.Controls.Add(this.button18);
+            this.Controls.Add(this.btnTamTinh);
+            this.Controls.Add(this.lvTT);
+            this.Controls.Add(this.btnTienM);
+            this.Controls.Add(this.btnCK);
             this.Controls.Add(this.button13);
-            this.Controls.Add(this.btnSoDoBan);
+            this.Controls.Add(this.btnThe);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.button11);
@@ -616,20 +616,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnSoDoBan;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnThe;
+        private System.Windows.Forms.Button btnCK;
+        private System.Windows.Forms.Button btnTienM;
+        private System.Windows.Forms.ListView lvTT;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDiscount;
+        private System.Windows.Forms.TextBox txtSum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button6;
@@ -638,8 +638,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnSuccess;
+        private System.Windows.Forms.Button btnTamTinh;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button11;
@@ -656,7 +656,7 @@
         private System.Windows.Forms.PictureBox imagePanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLoai;
         private System.Windows.Forms.Label label5;
     }
 }
