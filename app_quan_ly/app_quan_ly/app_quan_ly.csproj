@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9B63F06-3961-4B33-AE63-A81CBF0D47E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>app_quan_ly</RootNamespace>
+    <AssemblyName>app_quan_ly</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cai_Dat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cai_Dat.Designer.cs">
+      <DependentUpon>Cai_Dat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChuyenBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuyenBan.Designer.cs">
+      <DependentUpon>ChuyenBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChuyenKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChuyenKhoan.Designer.cs">
+      <DependentUpon>ChuyenKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FoodController.cs" />
+    <Compile Include="Controllers\PrintController.cs" />
+    <Compile Include="Controllers\QRController.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AppModel.cs" />
+    <Compile Include="Models\Ban.cs" />
+    <Compile Include="Models\CongThuc.cs" />
+    <Compile Include="Models\DanhMuc.cs" />
+    <Compile Include="Models\DetailThanhToan.cs" />
+    <Compile Include="Models\Kho.cs" />
+    <Compile Include="Models\KhuVuc.cs" />
+    <Compile Include="Models\MayIn.cs" />
+    <Compile Include="Models\NhanVien.cs" />
+    <Compile Include="Models\QR.cs" />
+    <Compile Include="Models\ThanhToan.cs" />
+    <Compile Include="The.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="The.Designer.cs">
+      <DependentUpon>The.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TienMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TienMat.Designer.cs">
+      <DependentUpon>TienMat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoaDon.Designer.cs">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyMon.Designer.cs">
+      <DependentUpon>QuanLyMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SoDoBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SoDoBan.Designer.cs">
+      <DependentUpon>SoDoBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanhToan.Designer.cs">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xacnhanbill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xacnhanbill.Designer.cs">
+      <DependentUpon>Xacnhanbill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XacNhanThe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XacNhanThe.Designer.cs">
+      <DependentUpon>XacNhanThe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Cai_Dat.resx">
+      <DependentUpon>Cai_Dat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuyenBan.resx">
+      <DependentUpon>ChuyenBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChuyenKhoan.resx">
+      <DependentUpon>ChuyenKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon.resx">
+      <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyMon.resx">
+      <DependentUpon>QuanLyMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoDoBan.resx">
+      <DependentUpon>SoDoBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanhToan.resx">
+      <DependentUpon>ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="The.resx">
+      <DependentUpon>The.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TienMat.resx">
+      <DependentUpon>TienMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xacnhanbill.resx">
+      <DependentUpon>Xacnhanbill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XacNhanThe.resx">
+      <DependentUpon>XacNhanThe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-mikhail-nilov-8245686.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_app.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calender.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calender1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calender2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khu_vuc_ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jcb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\napas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
