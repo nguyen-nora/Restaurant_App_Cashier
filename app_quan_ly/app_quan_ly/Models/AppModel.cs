@@ -49,6 +49,14 @@ namespace app_quan_ly.Models
                 .Property(e => e.so_tien)
                 .HasPrecision(18, 0);
 
+            modelBuilder.Entity<DetailThanhToan>()
+                .Property(e => e.thoi_gian)
+                .HasPrecision(0);
+
+            modelBuilder.Entity<DetailThanhToan>()
+                .Property(e => e.trang_thai)
+                .IsUnicode(false);
+
             modelBuilder.Entity<NhanVien>()
                 .Property(e => e.ma_nv)
                 .IsUnicode(false);
@@ -80,6 +88,10 @@ namespace app_quan_ly.Models
             modelBuilder.Entity<ThanhToan>()
                 .Property(e => e.thoi_gian_bill)
                 .HasPrecision(0);
+
+            modelBuilder.Entity<ThanhToan>()
+                .Property(e => e.trang_thai)
+                .IsUnicode(false);
         }
     }
 }

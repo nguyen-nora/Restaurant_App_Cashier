@@ -18,20 +18,25 @@ namespace app_quan_ly
     {
         private TableController tableController;
         private string maNhanVien;
+        private KitchenPrintMonitor kitchenPrintMonitor;
 
         public SoDoBan(string maNhanVien)
         {
             InitializeComponent();
             this.maNhanVien = maNhanVien;
             tableController = new TableController(maNhanVien);
+            kitchenPrintMonitor = new KitchenPrintMonitor();
         }
-
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
             if (tableController != null)
             {
                 tableController.Dispose();
+            }
+            if (kitchenPrintMonitor != null)
+            {
+                kitchenPrintMonitor.Dispose();
             }
         }
 
@@ -54,7 +59,7 @@ namespace app_quan_ly
         {
             QuanLyMon frm = new QuanLyMon();
             frm.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void btnSetup_Click(object sender, EventArgs e)
@@ -67,6 +72,11 @@ namespace app_quan_ly
         {
             ChuyenBan frm = new ChuyenBan();
             frm.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            //InitializeNotificationService();
         }
     }
 }

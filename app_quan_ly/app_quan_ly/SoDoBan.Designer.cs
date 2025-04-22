@@ -62,7 +62,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(57, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.Size = new System.Drawing.Size(133, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "20/02/2025 |  14:34";
             // 
@@ -74,7 +74,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.White;
             this.lblTitle.Location = new System.Drawing.Point(358, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(274, 24);
+            this.lblTitle.Size = new System.Drawing.Size(215, 18);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Main-CSR:  Huỳnh Mai Ái Ngọc";
             // 
@@ -84,7 +84,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(418, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(231, 36);
+            this.label3.Size = new System.Drawing.Size(181, 29);
             this.label3.TabIndex = 4;
             this.label3.Text = "Khu vực bàn ăn ";
             // 
@@ -146,7 +146,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(744, 293);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 24);
+            this.label4.Size = new System.Drawing.Size(119, 18);
             this.label4.TabIndex = 22;
             this.label4.Text = "Bàn đã có khách";
             // 
@@ -156,7 +156,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(744, 341);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 24);
+            this.label5.Size = new System.Drawing.Size(72, 18);
             this.label5.TabIndex = 23;
             this.label5.Text = "Bàn trống";
             // 
@@ -195,6 +195,7 @@
             this.btnDangXuat.TabIndex = 27;
             this.btnDangXuat.Text = "Đăng Xuất";
             this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnQLM
             // 

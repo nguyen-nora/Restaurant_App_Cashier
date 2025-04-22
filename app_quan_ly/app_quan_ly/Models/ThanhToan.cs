@@ -29,6 +29,12 @@ namespace app_quan_ly.Models
 
         public int? id_qr { get; set; }
 
+        public string ghi_chu { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string trang_thai { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetailThanhToan> DetailThanhToans { get; set; }
 

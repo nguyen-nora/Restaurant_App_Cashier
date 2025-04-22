@@ -23,6 +23,13 @@ namespace app_quan_ly.Models
 
         public string ghi_chu { get; set; }
 
+        [Column(TypeName = "datetime2")]
+        public DateTime? thoi_gian { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string trang_thai { get; set; }
+
         public virtual CongThuc CongThuc { get; set; }
 
         public virtual ThanhToan ThanhToan { get; set; }

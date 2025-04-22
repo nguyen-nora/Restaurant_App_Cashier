@@ -106,12 +106,96 @@ namespace app_quan_ly
             billController.UpdateTotal(txtSum, txtDiscount, txtTotal);
         }
 
+        private void btnTam_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                billController.PrintTemporaryBill(billId, lvBill, txtSum, txtDiscount, txtTotal);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error printing temporary bill: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
             if (billController != null)
             {
                 billController.Dispose();
+            }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TienMat tienMatForm = new TienMat(billId);
+                tienMatForm.ShowDialog();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening payment form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "1";
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "2";
+        }
+
+        private void btn3_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "3";
+        }
+
+        private void btn4_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "4";
+        }
+
+        private void btn5_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "5";
+        }
+
+        private void btn6_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "6";
+        }
+
+        private void btn7_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "7";
+        }
+
+        private void btn8_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "8";
+        }
+
+        private void btn9_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "9";
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            txtTotal.Text += "0";
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (txtTotal.Text.Length > 0)
+            {
+                txtTotal.Text = txtTotal.Text.Substring(0, txtTotal.Text.Length - 1);
             }
         }
     }

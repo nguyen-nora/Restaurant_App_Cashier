@@ -24,8 +24,8 @@ namespace app_quan_ly
 
         private void TableA1_Click(object sender, EventArgs e)
         {
-            ThanhToan frm = new ThanhToan();
-            frm.Show();
+            //ThanhToan frm = new ThanhToan();
+            //frm.Show();
         }
     }
 }

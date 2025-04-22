@@ -23,12 +23,20 @@ namespace app_quan_ly.Controllers
         public static string GenerateQRData(string maBan, string maNhanVien)
         {
             string currentTime = DateTime.Now.ToString("ddMMyyHHmm");
-            return $"{currentTime}{maBan}{maNhanVien}";
+            string qrCode = $"{currentTime}{maBan}{maNhanVien}";
+            return qrCode;
+        }
+
+        public static string GenerateQRDataWithLink(string maBan, string maNhanVien)
+        {
+            string currentTime = DateTime.Now.ToString("ddMMyyHHmm");
+            string qrCode = $"{currentTime}{maBan}{maNhanVien}";
+            return "http://192.168.1.250/Home/Index/" + qrCode;
         }
 
         public static Bitmap GenerateTableQRCode(string maBan, string maNhanVien)
         {
-            string qrData = GenerateQRData(maBan, maNhanVien);
+            string qrData = GenerateQRDataWithLink(maBan, maNhanVien);
             return GenerateQRCode(qrData);
         }
 
